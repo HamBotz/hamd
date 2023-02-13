@@ -20,19 +20,14 @@ import { Configuration, OpenAIApi } from "openai";
 let handler = async (m, { conn, text }) => {
 if (!text) throw "[!] Masukkan teks."
 const configuration = new Configuration({
-    apiKey: "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"
+    apiKey: "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"
 });
 const openai = new OpenAIApi(configuration);
-        const response = await openai.createCompletion({
-            model: "text-davinci-003",
-            prompt: text,
-            temperature: 0,
-            max_tokens: 3000,
-            top_p: 1,
-            frequency_penalty: 0.5,
-            presence_penalty: 0
-        });
-            m.reply(response.data.choices[0].text)
+    const completion = await openai.createCompletion({
+        model: "text-davinci-002",
+        prompt: text,
+  });
+            m.reply(completion.data.choices[0].text)
     }
 
 handler.menugroup = ['ai', 'openai']
