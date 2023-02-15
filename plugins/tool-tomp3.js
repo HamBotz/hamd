@@ -6,7 +6,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 	if (!/audio|video/.test(mime)) throw `Reply video/audio with caption *${usedPrefix + command}*`
 	let media = await q.download?.()
 	if (/video/.test(mime)) media = await toAudio(media, 'mp4').then((data) => data.toBuffer())
-	await conn.sendMsg(m.chat, /toa/.test(command) ? { audio: media, mimetype: 'audio/mp4' } : { document: media, mimetype: 'audio/mpeg', fileName: 'Convert by AzamiBot.mp3' }, { quoted: m })
+	await conn.sendMsg(m.chat, /toa/.test(command) ? { audio: media, mimetype: 'audio/mp4' } : { document: media, mimetype: 'audio/mpeg', fileName: 'Convert by HamBotz.mp3' }, { quoted: m })
 }
 
 handler.help = ['tomp3']
