@@ -39,7 +39,7 @@
 	},
 	"license": "GPL-3.0-or-later",
 	"dependencies": {
-		"@adiwajshing/baileys": "^5.0.0",
+		"@adiwajshing/baileys": "^4.4.0",
 		"@arugaz/ai2d": "^1.0.1-z.8",
 		"@bochilteam/scraper": "^4.0.22-alpha.0",
 		"@shineiichijo/nhentai-ts": "^1.0.0",
