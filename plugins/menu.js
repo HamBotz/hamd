@@ -194,8 +194,6 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, isPrems, args, usedPr
 				const listMessage = {
 					text: text.replaceAll('#','```').trim(),
 					footer: pauthor,
-					urlButton: { displayText: 'GroupBot',
-					url: 'https://chat.whatsapp.com/E00H4H5B83jFOmlV8DVO94' },
 					//title: '',
 					buttonText: `MENU`,
 					sections
