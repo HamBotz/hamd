@@ -42,16 +42,7 @@ const defaultMenu = {
 ⬡│☂︎ Uptime: %uptime
 ┬│☂︎ Database: %totalreg User
 │╰────────────────···
-╰──────────═┅═──────────
-
-JOIN GROUP BOT
-https://chat.whatsapp.com/E00H4H5B83jFOmlV8DVO94
-
-_Claim *.daily* atau mainkan game di *.funmenu* untuk mendapatkan exp / money_
-
-Jika ada fitur yang eror *.report* untuk melaporkan ke owner
-request fitur? *.request* 
-`.trimStart(),
+╰──────────═┅═──────────`.trimStart(),
 	header: '╭─「 %category 」',
 	body: '│ • %cmd %islimit %isPremium',
 	footer: '╰────\n',
@@ -207,7 +198,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, isPrems, args, usedPr
 					buttonText: `MENU`,
 					sections
 				}
-				await conn.sendMsg(m.chat, listMessage, {quoted: ftrol})
+				await conn.sendMsg(m.chat, listMessage, 'https://chat.whatsapp.com/E00H4H5B83jFOmlV8DVO94', 'GROUP', {quoted: ftrol})
 			}
 		}
 	} catch (e) {
