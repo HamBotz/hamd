@@ -31,7 +31,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 }
 
 handler.menuanime = ['wmit']
-handler.tagsanime = ['search']
+handler.tagsanime = ['anime']
 handler.command = /^wmit|(whatmanga)$/i
 
 handler.premium = true

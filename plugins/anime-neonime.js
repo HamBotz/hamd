@@ -21,7 +21,7 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
 }
 
 handler.menuanime = ['neonimelatest']
-handler.tagsanime = ['search']
+handler.tagsanime = ['anime']
 handler.command = /^(neonime( latest|latest)?)$/i
 
 handler.premium = true

@@ -28,7 +28,7 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
 }
 
 handler.menuanime = ['jadianime']
-handler.tagsanime = ['search']
+handler.tagsanime = ['anime']
 handler.command = /^((to|jadi)a?nime)$/i
 
 handler.premium = true

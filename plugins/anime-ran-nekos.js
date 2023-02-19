@@ -18,7 +18,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 }
 
 handler.menuanime = ['baka','facepalm','feed','husbando','nod','nope','tickle']
-handler.tagsanime = ['randompic']
+handler.tagsanime = ['anime']
 handler.command = /^(baka|facepalm|feed|husbando|nod|nope|tickle)$/i
 
 handler.premium = true

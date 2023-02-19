@@ -19,7 +19,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 }
 
 handler.menuanime = ['storyanime']
-handler.tagsanime = ['randommp4']
+handler.tagsanime = ['anime']
 handler.command = /^(stor(i|y)a?nime|a?nimestor(i|y))$/i
 
 handler.premium = true
