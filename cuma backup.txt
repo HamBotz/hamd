@@ -1,0 +1,13 @@
+"awesome-phonenumber": "^4.2.1"
+"axios": "^1.2.2"
+"caliph-api": "^0.9.5",
+"file-type": "^18.0.0",
+"genshin-db": "^4.3.4",
+"lowdb": "^5.0.5",
+"mongoose": "^6.8.2",
+"pino": "^8.8.0",
+"pino-pretty": "^9.1.1",
+"socket.io": "^4.5.4",
+"tinycolor2": "^1.5.2",
+"wa-sticker-formatter": "^4.3.2",
+"yargs": "^17.6.2",
