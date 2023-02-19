@@ -4,9 +4,7 @@ import { join } from 'path'
 import fs from 'fs'
 
 let tagsanime = {
-	'search': '🚀 *SEARCH*',
-	'randompic': '✨ *RANDOM PIC*',
-	'randommp4': '✨ *RANDOM MP4*',
+	'anime': '✨ *RANDOM PIC*'
 }
 const defaultMenu = {
 	before: `
