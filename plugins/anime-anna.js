@@ -1,8 +1,17 @@
 import fetch from 'node-fetch'
 
 let handler = async (m, { conn, command }) => {
-	let url = 'https://api.zeeoneofc.xyz/api/anime/anna?apikey=5Cd8U3tG'
-	conn.sendButton(m.chat, 'Waifu nya om (≧ω≦)', await(await fetch(url)).buffer(), [['Next',`.${command}`]],m)
+	const url = 'https://api.zeeoneofc.xyz/api/anime/anna?apikey=5Cd8U3tG'
+	let button = [
+		{buttonId: `${usedPrefix}anna`, buttonText: {displayText: 'NEXT'}, type:1} 
+	  ]
+	  let buttonMessage = {
+		image: { url: url},
+		caption: `*Klik next untuk melanjutkan*`,
+		buttons: button,
+		headerType: 4
+	  } 
+	  conn.sendMessage(m.chat, buttonMessage, {quoted: m})
 }
 handler.command = /^(anna)$/i
 handler.tagsanime = ['anime']
