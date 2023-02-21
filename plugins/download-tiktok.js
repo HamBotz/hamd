@@ -11,6 +11,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 }
 handler.menudownload = ['tiktok <url>']
 handler.tagsdownload = ['search']
+handler.limit = true
 
 handler.command = /^(tiktok|dl|tt?)$/i
 
