@@ -1,6 +1,6 @@
 import fetch from 'node-fetch'
 
-let handler = async (m, { conn, command }) => {
+let handler = async (m, { conn, usedPrefix }) => {
 	const url = 'https://api.zeeoneofc.xyz/api/anime/anna?apikey=5Cd8U3tG'
 	let button = [
 		{buttonId: `${usedPrefix}anna`, buttonText: {displayText: 'NEXT'}, type:1} 

@@ -1,7 +1,7 @@
 import fs from 'fs'
 import fetch from 'node-fetch'
 
-let handler = async (m, { conn, usedPrefix, command }) => {
+let handler = async (m, { conn, usedPrefix }) => {
 let res = await fetch('https://raw.githubusercontent.com/ArugaZ/grabbed-results/main/random/anime/random.txt')
 let txt = await res.text()
 let arr = txt.split('\n')

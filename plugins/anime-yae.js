@@ -1,6 +1,6 @@
 import fetch from 'node-fetch'
 
-let handler = async (m, { conn, command }) => {
+let handler = async (m, { conn, usedPrefix }) => {
 	let url = 'https://rokuhentai.com/?q=%22Yae+Miko%22'
 	let button = [
 		{buttonId: `${usedPrefix}yae`, buttonText: {displayText: 'NEXT'}, type:1} 
