@@ -12,13 +12,13 @@ let handler = m => m
 	global.apilol = db.data.datas.api	// https://api.lolhuman.xyz/docs
 	global.imgbb = db.data.datas.imgbb	// https://api.imgbb.com/
 
-	//global.ephemeral = '' // 86400 = 24jam, kalo ingin di hilangkan ganti '86400' jadi 'null' atau ''
+	global.ephemeral = 'null' // 86400 = 24jam, kalo ingin di hilangkan ganti '86400' jadi 'null' atau ''
 	global.timeh = `🕰️ ${d.toLocaleTimeString('id', { hour: 'numeric', minute: 'numeric', second: 'numeric' }).replace(/./,':')}`
 	
 	//fake troli
 	global.ftroli = { key: {participant : '0@s.whatsapp.net'}, message: { orderMessage: { itemCount: 2023, status: 1, surface: 1, message: timeh, ordertitle: pauthor, sellerJid: '0@s.whatsapp.net' } } }
 	// fake kontak
-	global.fkontak = { key: {participant : '0@s.whatsapp.net'}, message: { 'contactMessage': { 'displayName': this.getName(m.sender), 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${pauthor},;;;\nFN:${pauthor},\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabell:Ponsel\nEND:VCARD`, 'jpegThumbnail': fs.readFileSync('./media/thumbnail.jpg'), thumbnail: fs.readFileSync('./media/thumbnail.jpg')}}}
+	global.fkontak = { key: {participant : '0@s.whatsapp.net'}, message: { 'contactMessage': { 'displayName': this.getName(m.sender), 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${pauthor},;;;\nFN:${pauthor},\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabell:Ponsel\nEND:VCARD`, 'jpegThumbnail': fs.readFileSync('./media/thumbnail.jpg'), thumbnail: fs.readFileSync('./media/thumbnail.jpg'),sendEphemeral: true}}}
 	// fake vn
 	global.fvn = {
 		key: { participant : '0@s.whatsapp.net'},
@@ -129,7 +129,7 @@ let handler = m => m
 		},
 		message: {
 			orderMessage: {
-				itemCount : 723,
+				itemCount : 830,
 				//status: 1,
 				//surface : 1,
 				message: pauthor,
