@@ -1,7 +1,4 @@
-import { createRequire } from 'module';
-const require = createRequire(import.meta.url);
-
-const jimp_1 = require('jimp')
+import jimp_1 from 'jimp'
 
 let handler = async (m, { conn, command, usedPrefix }) => {
 	let q = m.quoted ? m.quoted : m
@@ -25,7 +22,7 @@ let handler = async (m, { conn, command, usedPrefix }) => {
 					}
 				]
 			})
-			m.reply(`Admin @${(m.sender || '').replace(/@s\.whatsapp\.net/g, '')} telah mengganti Icon Group!`, null, { mentions: [m.sender] })
+			m.reply(`Sukses mengganti Icon Group!`)
 		} catch (e) {
 			console.log(e)
 			m.reply(`Terjadi kesalahan, coba lagi nanti.`)

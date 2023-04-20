@@ -33,6 +33,7 @@ export async function handler(chatUpdate) {
 	if (!m)
 		return
 	if (m.message?.viewOnceMessageV2) m.message = m.message.viewOnceMessageV2.message
+	if (m.message?.documentWithCaptionMessage) m.message = m.message.documentWithCaptionMessage.message
 	if (db.data == null)
 		await loadDatabase()
 	try {
@@ -1048,6 +1049,7 @@ export async function handler(chatUpdate) {
 					continue
 				}
 				m.isCommand = true
+				_user.spamcount += 1
 				let xp = 'exp' in plugin ? parseInt(plugin.exp) : 17 // XP Earning per command
 				if (xp > 200)
 					m.reply('Ngecit -_-') // Hehehe

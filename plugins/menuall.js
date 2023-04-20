@@ -2,7 +2,6 @@ import db from '../lib/database.js'
 import { readMore, ranNumb, padLead, runtimes } from '../lib/others.js'
 import { promises } from 'fs'
 import { join } from 'path'
-import fs from 'fs'
 import got from 'got'
 import os from 'os'
 
@@ -91,7 +90,6 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, isPrems }) => {
 			readmore: readMore
 		}
 		text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-		const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './src/avatar_contact.png')
 		conn.sendButton(m.chat, text.trim(), pauthor, nais, [
 			[`👥 Owner`, `.owner`],
 			[`👑 Prem`, `.premium`]

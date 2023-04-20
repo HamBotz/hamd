@@ -1,7 +1,6 @@
 import { readMore, ranNumb, padLead } from '../lib/others.js'
 import { promises } from 'fs'
 import { join } from 'path'
-import fs from 'fs'
 import got from 'got'
 
 let tagsgenshin = {

@@ -49,11 +49,39 @@ const { state, saveState } = store.useSingleFileAuthState(global.authFile)
 
 const connectionOptions = {
 	printQRInTerminal: true,
+	syncFullHistory: false,
 	auth: state,
 	// logger: pino({ level: 'trace' })
 }
 
-global.conn = makeWASocket(connectionOptions)
+//global.conn = makeWASocket(connectionOptions)
+global.conn = makeWASocket({
+	...connectionOptions,
+	generateHighQualityLinkPreview: true, // menambah kualitas thumbnail preview
+	// patch dibawah untuk tambahan jika hydrate/list tidak bekerja
+	patchMessageBeforeSending: (message) => {
+		const requiresPatch = !!(
+			message.buttonsMessage 
+			|| message.templateMessage
+			|| message.listMessage
+		);
+		if (requiresPatch) {
+			message = {
+				viewOnceMessage: {
+					message: {
+						messageContextInfo: {
+							deviceListMetadataVersion: 2,
+							deviceListMetadata: {},
+						},
+						...message,
+					},
+				},
+			};
+		}
+
+		return message;
+	}
+})
 conn.isInit = false
 
 if (!opts['test']) {
